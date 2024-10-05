@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="item in children">
-      <a :href="item.path">{{ item.name }}</a>
+      <NuxtLink :to="item.path">{{ item.name }}</NuxtLink>
     </li>
   </ul>
 </template>
