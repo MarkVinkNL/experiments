@@ -7,20 +7,27 @@
 </template>
 
 <script setup>
-  const router = useRouter();
-  const route = useRoute();
+const router = useRouter();
+const route = useRoute();
 
-  let children = [];
+let children = [];
 
+router.getRoutes().forEach((routes) => {
+  if (!routes.path.startsWith(route.path) || route.path == routes.path) return;
 
-  router.getRoutes().forEach((routes) => {
-    if (!routes.path.startsWith(route.path) || route.path == routes.path) return;
+  let thisRoute = routes.path;
+  if (route.path != '/') {
+    thisRoute = routes.path.substring(route.path.length)
+  }
 
-    children.push({
-      name: routes.name,
-      path: routes.path,
-    })
+  if ((thisRoute.match(/\//g) || []).length >= 2) return
+
+  children.push({
+    route: thisRoute,
+    name: routes.name,
+    path: routes.path,
   })
+})
 
-  children.sort((a, b) => a.name.localeCompare(b.name))
+children.sort((a, b) => a.name.localeCompare(b.name))
 </script>

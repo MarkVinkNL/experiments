@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 200 200" xml:space="preserve">
+  <style type="text/css">
+    .leeg {
+      fill: none;
+    }
+
+    .groen {
+      fill: #03EF2A;
+      transition: 0.3s ease;
+    }
+
+    .paars {
+      fill: #FF00FF;
+      transition: 0.3s ease;
+    }
+
+    .moving .roteren {
+      animation-name: rotate;
+      animation-duration: 2s;
+      transform-origin: 50% 50%;
+      animation-iteration-count: infinite;
+    }
+
+    .moving .roteren2 {
+      animation-name: rotate;
+      animation-duration: 3s;
+      transform-origin: 50% 50%;
+      animation-iteration-count: infinite;
+    }
+
+    .ending .roteren {
+      animation-name: rotate;
+      animation-duration: 2s;
+      transform-origin: 50% 50%;
+      animation-iteration-count: 1;
+    }
+
+    .ending .roteren2 {
+      animation-name: rotate;
+      animation-duration: 3s;
+      transform-origin: 50% 50%;
+      animation-iteration-count: 1;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <g id="el">
+    <g class="roteren">
+      <rect x="25" y="25" class="leeg" width="150" height="150" />
+      <circle id="circle_groen" class="groen" cx="134" cy="66" r="41" />
+    </g>
+    <g class="roteren2">
+      <rect x="25" y="25" class="leeg" width="150" height="150" />
+      <circle id="circle_paars" class="paars" cx="81.5" cy="118.5" r="56.5" />
+    </g>
+  </g>
+
+  <script type="text/javascript">
+    <![CDATA[
+    console.log('inline js script in SVG geactiveerd');
+
+    let el = document.getElementById('el');
+
+    el.onmouseenter = function(){
+      el.classList.add('moving');
+    }
+
+    el.onmouseleave = function(){
+      el.classList.remove('moving');
+      el.classList.add('ending');
+
+      setTimeout(() => {
+        el.classList.remove('ending');
+      }, 3000)
+    }
+    ]]>
+  </script>
+</svg>

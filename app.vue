@@ -1,10 +1,12 @@
 <template>
   <div>
+    <div class="page">
+      <NuxtPage />
+    </div>
     <Navigation />
-    <NuxtPage />
   </div>
 </template>
 
 <style lang="scss">
-  @use "~/assets/scss/template.scss";
+@use "~/assets/scss/template.scss";
 </style>

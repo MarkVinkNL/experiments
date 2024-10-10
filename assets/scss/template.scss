@@ -1,2 +1,19 @@
 @import "bootstrap/scss/bootstrap-reboot";
+@import "./variables";
 @import "bootstrap/scss/bootstrap-grid";
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --c-red-default: #d81159;
+  --c-purple-default: #8f2d56;
+  --c-green-default: #218380;
+  --c-yellow-default: #fbb13c;
+  --c-blue-default: #73d2de;
+}

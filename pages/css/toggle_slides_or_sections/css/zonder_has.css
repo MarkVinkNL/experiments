@@ -1,0 +1,13 @@
+.variant-2 section {
+  transform: translateX(-100vw);
+}
+
+.variant-2 main input {
+  position: fixed;
+  left: -20vw;
+  top: 0;  
+}
+
+.variant-2 input:checked + section {
+  transform: translateX(0);
+}

@@ -1,0 +1,20 @@
+.variant-1 nav ul input {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0.3;
+}
+
+.variant-1:has(input[value="home"]:checked) .home {
+  transform: translateX(0);
+}
+.variant-1:has(input[value="about"]:checked) .about {
+  transform: translateX(0);
+}
+.variant-1:has(input[value="work"]:checked) .work {
+  transform: translateX(0);
+}
+.variant-1:has(input[value="contact"]:checked) .contact {
+  transform: translateX(0);
+}
