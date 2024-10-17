@@ -15,13 +15,23 @@
 
 <style>
 .menu {
-  position: absolute;
-  inset: 0;
   padding-top: var(--header-height);
 
   .title {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      a {
+        font-size: 1.25rem;
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 }
 </style>

@@ -57,7 +57,7 @@ header {
 
   nav {
     background: black;
-    border-radius: 1.5rem;
+    border-radius: .25rem;
 
     ul {
       list-style: none;
@@ -77,6 +77,12 @@ header {
           color: var(--c-yellow-default);
         }
       }
+    }
+  }
+
+  .back {
+    a {
+      color: var(--page-color, white);
     }
   }
 }

@@ -1,19 +1,42 @@
-@import "bootstrap/scss/bootstrap-reboot";
 @import "./variables";
-@import "bootstrap/scss/bootstrap-grid";
 
-.page {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body {
+  @include media-breakpoint-up(2k) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-up(3k) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-up(4k) {
+    font-size: 22px;
+  }
 }
 
-:root {
-  --c-red-default: #d81159;
-  --c-purple-default: #8f2d56;
-  --c-green-default: #218380;
-  --c-yellow-default: #fbb13c;
-  --c-blue-default: #73d2de;
+.page-wrapper {
+  position: relative;
+  color: var(--page-color, white);
+  background-color: var(--page-bg, var(--c-purple-default));
+}
+
+.page {
+  padding: 0.1px;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.explanation {
+  p {
+    max-width: 40rem;
+  }
 }

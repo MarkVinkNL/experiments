@@ -1,12 +1,22 @@
 <template>
-
-  <div>
-    <h1>{{ route.name }}</h1>
-    <Children />
-  </div>
-
+  <Menu />
 </template>
 
 <script setup>
-const route = useRoute();
+useHead({
+  bodyAttrs: {
+    class: 'js'
+  }
+})
+
+definePageMeta({
+  name: "GSAP",
+  title: "GSAP experiments"
+})
 </script>
+
+<style>
+body.js {
+  --page-bg: var(--c-yellow-darker);
+}
+</style>

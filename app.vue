@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div class="page">
-      <NuxtPage />
+    <div class="page-wrapper">
+      <Grid />
+      <div class="page">
+        <NuxtPage />
+      </div>
     </div>
     <Navigation />
   </div>

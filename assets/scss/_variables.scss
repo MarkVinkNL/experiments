@@ -1,3 +1,5 @@
+@import "bootstrap/scss/bootstrap-reboot";
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -25,4 +27,31 @@ $container-max-widths: (
 ) !default;
 
 $grid-columns: 24;
-$grid-gutter-width: 1.5rem;
+$grid-gutter-width: 0.75rem;
+
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/bootstrap-utilities";
+
+:root {
+  --c-red-lighter: hsl(338, 85%, 66%);
+  --c-red-default: hsl(338, 85%, 46%);
+  --c-red-darker: hsl(338, 85%, 26%);
+
+  --c-purple-lighter: hsl(335, 52%, 57%);
+  --c-purple-default: hsl(335, 52%, 37%);
+  --c-purple-darker: hsl(335, 52%, 17%);
+
+  --c-green-lighter: hsl(178, 60%, 52%);
+  --c-green-default: hsl(178, 60%, 32%);
+  --c-green-darker: hsl(178, 60%, 12%);
+
+  --c-yellow-lighter: hsl(37, 96%, 81%);
+  --c-yellow-default: hsl(37, 96%, 61%);
+  --c-yellow-darker: hsl(37, 96%, 41%);
+  --c-yellow-darkest: hsl(30, 96%, 21%);
+
+  --c-blue-lighter: hsl(187, 62%, 86%);
+  --c-blue-default: hsl(187, 62%, 66%);
+  --c-blue-darker: hsl(187, 62%, 46%);
+  --c-blue-darkest: hsl(187, 62%, 26%);
+}

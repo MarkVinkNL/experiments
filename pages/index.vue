@@ -1,14 +1,26 @@
 <template>
-
-  <div class="menu">
-    <div class="container">
-      <div class="row">
-        <div class="col-24">
-          <h1>Experimenten</h1>
-          <Children />
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <Menu />
 </template>
+
+<script setup>
+useHead({
+  bodyAttrs: {
+    class: 'home'
+  }
+})
+
+definePageMeta({
+  name: "Experimenten",
+  title: "Experiments"
+})
+
+useSeoMeta({
+  titel: "Experiments"
+});
+</script>
+
+<style>
+body.home {
+  --page-bg: var(--c-blue-darkest);
+}
+</style>
