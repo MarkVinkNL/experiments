@@ -11,5 +11,5 @@
 </template>
 
 <style lang="scss">
-@use "~/assets/scss/template.scss";
+@import "assets/scss/template";
 </style>

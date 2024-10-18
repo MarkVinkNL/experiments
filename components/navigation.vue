@@ -13,7 +13,7 @@
         </ul>
       </nav>
       <div class="back" v-if="parent != ''">
-        <NuxtLink :to="parent">Terug</NuxtLink>
+        <NuxtLink :to="parent"><span>&lsaquo;</span> back</NuxtLink>
       </div>
     </div>
   </header>
@@ -83,6 +83,18 @@ header {
   .back {
     a {
       color: var(--page-color, white);
+      font-size: 1.25rem;
+    }
+
+    span {
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    &:hover {
+      span {
+        transform: translateX(-50%);
+      }
     }
   }
 }

@@ -1,42 +1,99 @@
-@import "./variables";
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+  2k: 1800px,
+  3k: 2600px,
+  4k: 3800px,
+) !default;
 
-body {
-  @include media-breakpoint-up(2k) {
-    font-size: 18px;
+$container-max-widths: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  2k: 1600px,
+  3k: 2200px,
+  4k: 3600px,
+) !default;
+
+$grid-columns: 24;
+$grid-gutter-width: 0.75rem;
+
+@layer core, template, pages, component;
+
+@layer core {
+  //Define variable overrides before the reboot as the reboot loads the variables
+  // Took me some time to debug this in my first project like this.
+  @import "bootstrap/scss/bootstrap-reboot";
+  @import "bootstrap/scss/bootstrap-grid";
+
+  //Project vars mostly one place to load all mixins and scss vars
+  @import "variables";
+
+  body {
+    font-size: 16px;
+
+    @include media-breakpoint-up(2k) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-up(3k) {
+      font-size: 20px;
+    }
+
+    @include media-breakpoint-up(4k) {
+      font-size: 22px;
+    }
   }
 
-  @include media-breakpoint-up(3k) {
-    font-size: 20px;
+  .page-wrapper {
+    position: relative;
+    color: var(--page-color, white);
+    background-color: var(--page-bg, var(--c-purple-default));
   }
 
-  @include media-breakpoint-up(4k) {
-    font-size: 22px;
+  .page {
+    padding: 0.1px;
+    position: relative;
+    min-height: 100vh;
   }
-}
 
-.page-wrapper {
-  position: relative;
-  color: var(--page-color, white);
-  background-color: var(--page-bg, var(--c-purple-default));
-}
+  a {
+    color: white;
+    text-decoration: none;
 
-.page {
-  padding: 0.1px;
-  position: relative;
-  min-height: 100vh;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-
-  &:hover {
-    opacity: 0.8;
+    &:hover {
+      opacity: 0.8;
+    }
   }
-}
 
-.explanation {
-  p {
-    max-width: 40rem;
+  .explanation {
+    p {
+      max-width: 80ch;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
   }
 }

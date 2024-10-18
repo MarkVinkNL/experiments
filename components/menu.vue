@@ -3,8 +3,9 @@
   <div class="menu">
     <div class="container">
       <div class="row">
-        <div class="col-24">
+        <div class="col-22 offset-1 explanation">
           <h1 class="title">{{ route.meta.title ?? route.name }}</h1>
+          <p v-if="route.meta.intro" v-html="route.meta.intro"></p>
           <Children />
         </div>
       </div>
@@ -18,6 +19,7 @@
   padding-top: var(--header-height);
 
   .title {
+
     margin-bottom: 1.5rem;
     text-transform: uppercase;
   }
