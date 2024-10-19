@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-22 offset-1 explanation">
-          <h1 class="title">{{ route.meta.title ?? route.name }}</h1>
+          <h1 class="title">{{ route.meta.menu_title ?? route.name }}</h1>
           <p v-if="route.meta.intro" v-html="route.meta.intro"></p>
           <Children />
         </div>
