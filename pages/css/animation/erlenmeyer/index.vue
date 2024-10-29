@@ -2,7 +2,7 @@
   <div class="container erlenmeyer">
     <div class="row">
       <div class="col-22 offset-1">
-        <h2>Animated pencil concept</h2>
+        <h2>Animated erlenmeyer concept</h2>
         <p>Made: 05/2014</p>
 
         <div class="old_experiment_wrapper">
@@ -37,12 +37,14 @@ useHead({
     class: 'css-erlenmeyer'
   }
 })
+
+definePageMeta({
+  name: "CSS Erlenmeyer Animations",
+})
 </script>
 
 
 <style lang="scss">
-@import "~/assets/scss/variables";
-
 body.css-erlenmeyer {
   --page-bg: #F5F5ED;
   --page-color: black;

@@ -49,8 +49,6 @@ useHead({
 
 
 <style lang="scss">
-@import "~/assets/scss/variables";
-
 body.css-pencil {
   --page-bg: #F5F5ED;
   --page-color: black;

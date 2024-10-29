@@ -3,10 +3,8 @@
 </template>
 
 <script setup>
-useHead({
-  bodyAttrs: {
-    class: 'css'
-  }
+definePageMeta({
+  name: "CSS Animations",
 })
 </script>
 

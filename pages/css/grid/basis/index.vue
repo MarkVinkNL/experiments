@@ -32,8 +32,6 @@ useHead({
 </script>
 
 <style lang="scss">
-@import 'scss/_variables.scss';
-
 body.css {
   --page-bg: var(--c-blue-darkest);
 }

@@ -11,15 +11,21 @@ export default defineNuxtConfig({
   alias: {
     'scss': resolve(__dirname, './assets/scss'),
   },
+  modules: [
+    // Simple usage
+    'nuxt-purgecss',
+  ],
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  css: ["@/assets/scss/template.scss"],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
+          additionalData: '@use "@/assets/scss/_variables.scss" as *;',
           api: "modern",
           quietDeps: true
-        }
+        },
       }
     }
   }

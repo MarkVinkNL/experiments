@@ -2,14 +2,22 @@
   <div>
     <div class="page-wrapper">
       <Grid />
-      <div class="page">
-        <NuxtPage />
+      <div>
+        <NuxtPage class="page" />
       </div>
     </div>
     <Navigation />
   </div>
 </template>
 
-<style lang="scss">
-@import "assets/scss/template";
-</style>
+<script setup>
+useHead({
+  title: "Mark Vink | WEB Experiments",
+  meta: {
+    description: "Mark Vink is a webdeveloper since 2005, these are some of his webdevelopment tests and other curious junk."
+  },
+  bodyAttrs: {
+    class: 'css',
+  }
+})
+</script>

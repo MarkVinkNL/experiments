@@ -20,6 +20,10 @@
 </template>
 
 <style scoped>
+body.counter {
+  --page-bg: var(--c-green-default);
+}
+
 .number_counter {
   display: flex;
   flex-direction: column;
@@ -72,14 +76,10 @@
 
 
 .number_counter {
-  position: absolute;
-  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--c-green-default);
   font-style: italic;
-  padding: 1;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -89,6 +89,11 @@
 }
 </style>
 <script setup>
+useHead({
+  bodyAttrs: {
+    class: 'counter'
+  }
+})
 
 let target = 200000;
 let current = 0;
